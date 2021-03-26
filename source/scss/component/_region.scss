@@ -1,0 +1,313 @@
+/* ====================================
+   REGION
+   ==================================== */
+
+.zone {
+    margin-bottom: 50px;
+    &__heading {
+        margin-bottom: 43px;
+        * {
+            font-size: 30px;
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-align: center;
+        }
+        span {
+            font-size: 22px;
+            line-height: 27px;
+            font-weight: 300;
+            display: block;
+        }
+    }
+    &__content {
+        @include clearfix();
+    }
+    &--congress {
+        width: 730px;
+        margin: -175px auto 50px;
+        @include breakpoint(1280px) {
+            width: 1050px;
+        }
+        .slick-slide {
+            display: flex;
+            justify-content: center;
+        }
+        .slick-height {
+            height: 292px;
+            display: flex;
+            align-items: center;
+            margin: 0 15px;
+            i {
+                display: none;
+            }
+        }
+        .outline {
+            border-radius: 50%;
+            padding: 8px;
+            border: 1px dashed #ddd;
+            position: relative;
+        }
+        .congress-label {
+            color: $primary;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-decoration: underline;
+            width: 140px;
+            height: 140px;
+            background: #eee;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 0 8px inset rgba(0,0,0,.03);
+            z-index: 1;
+            * {
+                font-size: 20px;
+                font-size: 2rem;
+                line-height: 24px;
+                line-height: 2.4rem;
+            }
+            .regular-text, .medium-text {
+                display: none;
+            }
+        }
+        .slick-center {
+            .slick-height {
+                margin: 0 45px;
+                i {
+                    display: block;
+                }
+            }
+            .congress-label {
+                color: #fff;
+                text-align: center;
+                text-decoration: none;
+                width: 220px;
+                height: 220px;
+                display: block;
+                padding: 50px 0;
+                background: $primary;
+                box-shadow: 0 0 0 8px inset rgba(0,0,0,.15);
+                &:before, &:after {
+                    content: "";
+                    display: block;
+                    width: 100px;
+                    height: 1px;
+                    background: rgba(255,255,255,.3);
+                    margin: auto;
+                }
+                &:before {
+                    margin-bottom: 16px;
+                }
+                &:after {
+                    margin-top: 16px;
+                }
+                span {
+                    display: block;
+                }
+                .regular-text {
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 400;
+                }
+                .medium-text {
+                    font-size: 26px;
+                    line-height: 32px;
+                }
+                .exbold-text {
+                    font-size: 28px;
+                    line-height: 34px;
+                    font-weight: 800;
+                }
+            }
+        }
+        .slick-next, .slick-prev {
+            background: url('../img/qhxv_sprites.svg?1.1') no-repeat;
+            background-size: 500px 500px;
+            width: 32px;
+            height: 60px;
+            top: 115px;
+            bottom: auto;
+            &:before {
+                content: none;
+            }
+            &:active {
+                margin-top: 1px;
+            }
+        }
+        .slick-next {
+            background-position: -100px -100px;
+            right: -60px;
+        }
+        .slick-prev {
+            background-position: 0 -100px;
+            left: -60px;
+        }
+    }
+    &--congressman {
+        margin-bottom: 30px;
+        .cols-2 {
+            position: relative;
+            >* {
+                padding: 0 20px 20px;
+            }
+        }
+    }
+    &--interview {
+        margin-bottom: 80px;
+
+        .slick-next,
+        .slick-prev {
+            background: url('../img/qhxv_sprites.svg?1.1') no-repeat;
+            background-size: 500px 500px;
+            width: 32px;
+            height: 60px;
+            top: 105px;
+            bottom: auto;
+
+            &:before {
+                content: none;
+            }
+
+            &:active {
+                margin-top: 1px;
+            }
+        }
+
+        .slick-next {
+            background-position: -100px -100px;
+            right: 10%;
+        }
+
+        .slick-prev {
+            background-position: 0 -100px;
+            left: 10%;
+        }
+    }
+    &--province {
+        margin-bottom: 30px;
+        .province-list {
+            @include clearfix();
+            background: url('../img/qhxv_maskbg.png') no-repeat;
+            background-size: cover;
+            width: 88%;
+            height: 330px;
+            margin: auto;
+            overflow-y: auto;
+            li {
+                float: left;
+                border-right: 20px solid $secondary;
+                border-bottom: 20px solid $secondary;
+                &:nth-child(5n) {
+                    border-right: none;
+                }
+            }
+            .item {
+                width: 150px;
+                height: 50px;
+                font-size: 16px;
+                font-size: 1.6rem;
+                line-height: 20px;
+                line-height: 2rem;
+                color: #fff;
+                font-weight: 500;
+                text-transform: capitalize;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .story {
+                margin-bottom: 20px;
+            }
+
+            .story__thumb {
+                width: 218px;
+                float: left;
+                margin-right: 20px;
+            }
+
+            .story__title {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+    &--gallery {
+        margin-bottom: 30px;
+        .story {
+            background: $secondary;
+            position: relative;
+            width: 50%;
+            margin: 0 20px 20px 0;
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+            &__title {
+                padding: 12px 15px 15px;
+                
+            }
+        }
+    }
+    &--video {
+        .story {
+            &.large-thumb {
+                width: 49%;
+                float: left;
+                .story__title {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+                .summary:before {
+                    content: "";
+                    display: block;
+                    width: 100px;
+                    height: 1px;
+                    border-top: 1px dotted #ccc;
+                    margin: 20px 0 22px;
+                }
+            }
+            &.medium-thumb {
+                margin-bottom: 10px;
+                .story__thumb {
+                    height: 277px;
+                }
+            }
+            &.small-thumb {
+                width: 48%;
+                float: left;
+                margin-right: 18px;
+                @include breakpoint(1280px) {
+                    margin-right: 22px;
+                }
+                &:last-child {
+                    margin: 0;
+                }
+            }
+            &__thumb {
+                margin-bottom: 15px;
+            }
+        }
+        .float-right {
+            width: 49%;
+            .story__title {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+    }
+    &--popular {
+        .zone__heading {
+            margin-bottom: 20px;
+        }
+        .story__thumb {
+            margin-bottom: 15px;
+        }
+        .story__title {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}

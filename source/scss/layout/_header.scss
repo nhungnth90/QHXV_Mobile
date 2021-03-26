@@ -1,0 +1,178 @@
+/* ====================================
+   HEADER
+   ==================================== */
+
+.homepage {
+    .site-header  {
+        height: 730px;
+        background-position: 0 0;
+    }
+    .site-header__headline {
+        margin-top: 255px;
+        * {
+            font-weight: 800;
+        }
+        span {
+            font-size: 40px;
+            font-weight: 300;
+            display: block;
+        }
+    }
+}
+.site-header {
+    background: url('../img/qhxv_bg.png') 0 0 no-repeat;
+    background-size: cover;
+    height: 400px;
+    @include breakpoint(1280px) {
+        background-position: 0 -205px;
+    }
+    &__topbar {
+        @include clearfix();
+        padding: 10px 30px;
+        border-bottom: 1px dotted rgba(255,255,255,.3);
+        * {
+            font-size: 12px;
+            font-size: 1.2rem;
+            color: rgba(255,255,255,.6);
+        }
+        .datetime {
+            float: left;
+        }
+        .language {
+            float: right;
+            li {
+                display: inline-block;
+                a:after {
+                    content: "/";
+                    color: rgba(255,255,255,.6);
+                    display: inline-block;
+                    padding: 0 8px 0 10px;
+                }
+                &:last-child a:after {
+                    content: none;
+                }
+                &.active a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &__logo {
+        float: left;
+        margin: 5px 0 0 30px;
+    }
+    &__nav {
+        float: right;
+        margin: 20px 30px 0 0;
+        .menu-item {
+            display: inline-block;
+            &.selected .menu-heading {
+                text-decoration: underline;
+            }
+            &:hover {
+                .mega-menu {
+                    display: block;
+                }
+                .menu-heading {
+                    color: $primary;
+                }
+            }
+            a {
+                color: #fff;
+            }
+        }
+        .menu-heading {
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            &:after {
+                content: "/";
+                display: inline-block;
+                color: rgba(255,255,255,.3);
+                padding: 0 15px 0 17px;
+            }
+            i {
+                margin-left: 8px;
+            }
+        }
+        .mega-menu {
+            display: none;
+            width: 220px;
+            position: absolute;
+            background: $primary;
+            li {
+                border-bottom: 1px solid rgba(255,255,255,.2);
+            }
+            a {
+                font-size: 12px;
+                font-size: 1.2rem;
+                padding: 10px 18px;
+                &:hover {
+                    padding-left: 20px;
+                    background: $success;
+                }
+            }
+        }
+        .search-form {
+            position: relative;
+            margin-right: 22px;
+            .form-control {
+                font-size: 14px;
+                color: #fff;
+                width: 100px;
+                height: 15px;
+                background: none;
+                border: none;
+                border-bottom: 1px solid rgba(255,255,255,.3);
+                box-shadow: none;
+            }
+            .btn-search {
+                font-size: 16px;
+                font-size: 1.6rem;
+                position: absolute;
+                right: -22px;
+                bottom: -3px;
+            }
+        }
+    }
+    &__headline {
+        width: 900px;
+        margin: 140px auto 0;
+        text-align: center;
+        text-transform: uppercase;
+        * {
+            font-size: 55px;
+            font-size: 5.5rem;
+            line-height: 65px;
+            line-height: 6.5rem;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+    }
+}
+.breadcrumbs {
+    text-align: center;
+    margin-top: 18px;
+    a {
+        color: #fff;
+        font-weight: 500;
+        text-transform: uppercase;
+        display: inline-block;
+        &:after {
+            content: "/";
+            color: #fff;
+            display: inline-block;
+            padding: 0 15px 0 17px;
+        }
+        &:last-child:after {
+            content: none;
+        }
+        &:hover {
+            color: $primary;
+        }
+    }
+    i {
+        font-size: 18px;
+    }
+}
