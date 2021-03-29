@@ -2,10 +2,6 @@
    LAYOUT
    ==================================== */
 
-.l-grid {
-	@include clearfix();
-    padding: 0 15px;
-}
 .cols-2 {
 	font-size: 0;
 	margin-left: -10px;
@@ -17,51 +13,19 @@
 	    padding: 0 10px;
     }
 }
-.cols-3 {
-	font-size: 0;
-	margin-left: -11px;
-    margin-right: -11px;
-    >* {
-    	width: 33.33%;
-	    display: inline-block;
-	    vertical-align: top;
-	    padding: 0 11px;
-    }
-}
-.cols-4 {
-	font-size: 0;
-	margin-left: -10px;
-    margin-right: -10px;
-    >* {
-    	width: 25%;
-	    display: inline-block;
-	    vertical-align: top;
-	    padding: 0 10px;
-    }
-}
-.cols-5 {
-	font-size: 0;
-	margin-left: -10px;
-    margin-right: -10px;
-    >* {
-    	width: 20%;
-	    display: inline-block;
-	    vertical-align: top;
-	    padding: 0 10px;
-    }
-}
 .m-content {
-	padding: 30px 0;
+	padding: 30px 15px 0;
 }
 .area-light {
-	padding: 50px 0 65px;
-	margin-bottom: 95px;
+	padding: 30px 15px 50px;
+    margin: 0 -15px 70px;
 	background: $secondary;
+    overflow: hidden;
 	&:after {
 		display: block;
 		content: "";
 		width: 1px;
-	    height: 130px;
+	    height: 100px;
 	    position: absolute;
     	left: 50%;
     	border-left: 1px dotted #ccc;
@@ -76,7 +40,7 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        background: linear-gradient(to top, $secondary 15%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to top, $secondary 10%, rgba(255, 255, 255, 0) 100%);
     }
 }
 

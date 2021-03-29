@@ -3,8 +3,7 @@
    ==================================== */
 
 .divider {
-	width: 535px;
-	margin: 5px auto 0;
+	margin: 10px auto 0;
 	&:after {
 		content: "";
 		display: block;
@@ -19,11 +18,11 @@
 	}
 }
 .ic {
-	background: url('../img/qhxv_sprites.svg?1.1') no-repeat;
+	background: url('../img/m_qhxv_sprites.svg') no-repeat;
 	background-size: 500px 500px;
 	display: block;
 	&--emblem {
-		background: url('../img/qhxv_sprites.svg?1.1') 20px 0 no-repeat #fff;
+		background: url('../img/m_qhxv_sprites.svg') 20px 0 no-repeat #fff;
 		width: 70px;
 		height: 30px;
 		padding: 0 20px;
@@ -39,15 +38,15 @@
 	}
 	&--yellow-laurel {
 		background-position: 0 -200px;
-		width: 312px;
-		height: 196px;
-		position: absolute;
-		bottom: -30px;
-    	left: -40px;
+		width: 282px;
+	    height: 177px;
+	    position: absolute;
+	    bottom: -28px;
+	    left: -35px;
 	}
 }
 .number {
-	background: url('../img/qhxv_sprites.svg?1.1') no-repeat;
+	background: url('../img/m_qhxv_sprites.svg') no-repeat;
 	background-size: 500px 500px;
 	display: block;
 	width: 57px;

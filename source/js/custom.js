@@ -2,15 +2,45 @@
    Jscripts
    ==================================== */
 
+/*--- Toggle ---*/
+// Menu Danh Muc
+$("#menu_btn").on('click', function() {
+    $(this).toggleClass("open");
+    $('#menu_toggle').toggleClass("open");
+});
+
+// Menu Danh Muc Con
+$(".fa-angle-down").on('click', function() {
+    $(this).toggleClass("open");
+    $('.mega-menu').toggleClass("open");
+});
+
+
 /*--- Slick ---*/
 $(document).ready(function() {
     // Cac Khoa Quoc Hoi
     $('.slick-congress').slick({
         infinite: true,
         speed: 300,
-        slidesToShow: 5,
         centerMode: true,
-        variableWidth: true
+        variableWidth: true,
+        responsive: [{
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 375,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     // Thong Tin Toan Quoc
@@ -35,6 +65,7 @@ $(document).ready(function() {
 
     // Phat Bieu - Phong Van
     $('.slick-interview').slick({
+        dots: true,
         infinite: true,
         speed: 500,
         autoplay: true
@@ -144,24 +175,3 @@ jQuery(document).ready(function($) {
     });
 
 });
-
-/*--- Toggle ---*/
-// Search
-// $('.search').on('click', function() {
-//     $('.search-form').toggleClass("active");
-// });
-
-// // Expand Comment
-// $(".expand-btn").on('click', function() {
-//     $(this).toggleClass("active");
-//     $('#expand_comment').toggleClass("active");
-// });
-
-// // Expand Reply Comment
-// $("#expand_textarea").on('click', function() {
-//     $(this).toggleClass("active");
-//     $('#confirm_btn').toggleClass("active");
-// });
-
-/*--- Sticky ---*/
-// $(".sticky-bar").sticky({ topSpacing: 0 });
