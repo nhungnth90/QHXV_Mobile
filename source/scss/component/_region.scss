@@ -209,7 +209,7 @@
             }
 
             .story__thumb {
-                width: 218px;
+                width: 47.5%;
                 float: left;
                 margin-right: 20px;
             }
@@ -282,12 +282,11 @@
         .zone__heading {
             margin-bottom: 20px;
         }
-        .story__thumb {
-            margin-bottom: 15px;
+        .story {
+            margin-bottom: 10px;
         }
-        .story__title {
-            font-size: 18px;
-            line-height: 24px;
+        .story__thumb {
+            margin-bottom: 10px;
         }
     }
 }

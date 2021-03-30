@@ -5,6 +5,7 @@
 .search-keyword {
 	@include clearfix();
 	padding-bottom: 10px;
+	margin-bottom: 20px;
 	border-bottom: 1px dotted #ccc;
 	.keyword {
 		font-size: 26px;
@@ -18,9 +19,12 @@
 	.total {
 		font-size: 18px;
 		font-size: 1.8rem;
-		line-height: 38px;
-		line-height: 3.8rem;
-		float: right;
-		margin-right: 20px;
+		display: block;
+		@include breakpoint(768px) {
+			line-height: 38px;
+			line-height: 3.8rem;
+            float: right;
+            margin-right: 20px;
+        }
 	}
 }

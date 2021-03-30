@@ -4,8 +4,11 @@
 
 .details {
     @include clearfix();
-    width: 700px;
-    margin: 20px auto 30px;
+    margin-bottom: 20px;
+    @include breakpoint(768px) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
     &__headline {
         font-size: 40px;
         font-size: 4rem;
@@ -32,6 +35,7 @@
         margin-bottom: 20px;
         border-top: 1px dotted #ccc;
         border-bottom: 1px dotted #ccc;
+        overflow: hidden;
     }
     &__sapo {
         font-size: 20px;
@@ -40,15 +44,12 @@
         line-height: 3.2rem;
         color: #222;
         font-weight: 500;
-        margin-bottom: 35px;
+        margin-bottom: 25px;
         * {
             display: inline;
         }
         a {
             color: $primary;
-            &:hover {
-                text-decoration: underline;
-            }
         }
         b, strong {
             font-weight: 600;
@@ -64,7 +65,7 @@
             color: #222;
         }
         div, p {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         b, strong {
             font-weight: 600;
@@ -75,8 +76,9 @@
     }
     &__img {
         .image {
-            width: 980px;
-            margin: 0 -140px;
+            @include breakpoint(0, 375px) {
+                margin: 0 -15px;
+            }
             img {
                 max-width: 100%;
             }
@@ -94,14 +96,15 @@
                 width: 100px;
                 height: 1px;
                 border-top: 1px dotted #ccc;
-                margin: 23px auto 0;
+                margin: 18px auto 0;
             }
         }
     }
     &__tags {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         li {
             display: inline-block;
+            margin-bottom: 5px;
             i {
                 font-size: 18px;
                 color: $primary;
@@ -114,9 +117,6 @@
                 text-transform: uppercase;
                 text-decoration: underline;
                 margin: 0 10px;
-                &:hover {
-                    color: $primary;
-                }
             }
         }
     }

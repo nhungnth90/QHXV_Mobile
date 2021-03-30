@@ -25,10 +25,11 @@
 @import "component/back2top";
 
 /* pages */
-// @import "page/category";
-// @import "page/details";
-// @import "page/congressman";
-// @import "page/search-tags";
+@import "page/category";
+@import "page/details";
+@import "page/congressman";
+@import "page/profile";
+@import "page/search-tags";
 
 /* plugins */
 @import "plugins/slick.css";

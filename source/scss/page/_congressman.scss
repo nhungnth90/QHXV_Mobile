@@ -3,29 +3,38 @@
    ==================================== */
 
 .search-filter {
-	padding: 15px 0;
-	margin: -30px 0 50px;
+	padding: 15px;
+    margin: -30px -15px 30px;
 	background: $secondary;
+	.d-flex {
+		@include breakpoint(0, 375px) {
+	        display: block !important;
+	    }
+	}
 	.form-group {
-		margin: 0 10px 0 0;
+		@include breakpoint(768px) {
+	        margin: 0 10px 0 0;
+	    }
 	}
 	.form-control {
-		width: 170px;
 		height: 40px;
 		border-color: #dfdfdf;
 		border-radius: 0;
-		font-size: 14px;
+		font-size: 16px;
 		color: #333;
 		padding: 0 12px;
-		@include breakpoint(1280px) {
-	        width: 200px;
+		@include breakpoint(768px) {
+	        width: 120px;
 	    }
 	}
 	.btn {
 		font-size: 14px;
 		line-height: 30px;
-		width: 120px;
+		display: block;
 		border-radius: 0;
+		@include breakpoint(768px) {
+	        width: 120px;
+	    }
 	}
 }
 .congressman {
@@ -40,13 +49,14 @@
 			font-size: 14px;
 		}
 		.form-control {
-			width: 500px;
+			width: 55%;
 			height: 40px;
 			border-color: #dfdfdf;
 			border-radius: 0;
+			font-size: 16px;
 			color: #333;
 			padding: 0 12px;
-			margin: 0 20px;
+			margin: 0 10px;
 		}
 		.form-text {
 			margin: 0;
@@ -56,23 +66,28 @@
 		}
 	}
 	&-list {
-		li {
-			display: flex;
-			border-bottom: 1px dotted #ccc;
-		}
+		@include clearfix();
 		.story--congressman {
-			width: 25%;
-    		padding: 20px;
+			padding: 20px;
+			float: left;
+		    border-bottom: 1px dotted #ccc;
+		    @include breakpoint(0, 375px) {
+		        border-right: none;
+		        padding: 20px 5px;
+		    }
+		    @include breakpoint(768px) {
+		        width: 49.5%;
+		        min-height: 365px;
+		    }
+		    .thumb {
+		    	margin: 0 15px 0px 0;
+		    }
 		}
 	}
 	&-scroll {
-		width: 980px;
-	    height: 1750px;
+	    height: 1024px;
 	    margin: auto;
 	    overflow-y: scroll;
-	    @include breakpoint(1280px) {
-	        width: 1187px;
-	    }
 	}
 	&-location {
 		@include clearfix();
@@ -99,7 +114,7 @@
 		.result {
 			font-size: 14px;
 			float: right;
-			margin: 8px 20px 0 0;
+			margin-top: 8px;
 			i {
 				font-size: 18px;
 				margin-left: 8px;

@@ -75,7 +75,7 @@ $(document).ready(function() {
 
 /*--- Masonry ---*/
 function masonry(masonry, paramCols, paramResponsive) {
-    const tablet = 992;
+    const tablet = 768;
     const mobile = 576;
     let cols;
     let responsive = {
@@ -88,7 +88,7 @@ function masonry(masonry, paramCols, paramResponsive) {
     if (paramCols) {
         cols = paramCols
     } else {
-        cols = 3
+        cols = 2
     }
     if (paramResponsive.tablet) {
         responsive.tablet = paramResponsive.tablet
