@@ -4,20 +4,6 @@
 
 .timeline {
 	margin-bottom: 30px;
-	.page-link {
-		font-size: 16px;
-		line-height: 1.7;
-		color: #333;
-		text-align: center;
-		min-width: 35px;
-		height: 35px;
-		border: none;
-		background: #eee;
-		margin: 0 2px;
-	}
-	.page-item.active .page-link {
-		font-weight: 500;
-	}
 }
 .masonry {
 	display: flex;
@@ -39,4 +25,18 @@
 	time {
 		margin-bottom: 10px;
 	}
+}
+.page-link {
+	font-size: 16px;
+	line-height: 1.7;
+	color: #333;
+	text-align: center;
+	min-width: 35px;
+	height: 35px;
+	border: none;
+	background: #eee;
+	margin: 0 2px;
+}
+.page-item.active .page-link {
+	font-weight: 500;
 }

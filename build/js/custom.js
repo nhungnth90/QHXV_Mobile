@@ -3,6 +3,10 @@
    ==================================== */
 
 /*--- Toggle ---*/
+// Language
+$("#language_btn").on('click', function() {
+    $('#language_toggle').toggleClass("open");
+});
 // Menu Danh Muc
 $("#menu_btn").on('click', function() {
     $(this).toggleClass("open");
@@ -71,6 +75,12 @@ $(document).ready(function() {
         autoplay: true
     });
 });
+
+
+/*--- SlimScroll ---*/
+$('#slimScroll1').slimScroll({});
+$('#slimScroll2').slimScroll({});
+$('#slimScroll3').slimScroll({});
 
 
 /*--- Masonry ---*/

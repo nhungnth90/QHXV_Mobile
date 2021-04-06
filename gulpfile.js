@@ -39,7 +39,8 @@ gulp.task('scripts', function() {
             paths.js_dev + '/vendor/jquery-1.11.0.min.js',
             paths.js_dev + '/vendor/jquery-migrate-1.2.1.min.js',
             paths.js_dev + '/vendor/bootstrap-4.1.3.min.js',
-            paths.js_dev + '/vendor/slick-1.8.1/slick.min.js'
+            paths.js_dev + '/vendor/slick-1.8.1/slick.min.js',
+            paths.js_dev + '/vendor/jQuery-slimScroll-1.3.8/jquery.slimscroll.js'
             // paths.js_dev + '/vendor/jquery.matchHeight-min.js'
             // paths.js_dev + '/vendor/jquery.scrollbar.min.js'
             // end import plugin
